@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio — AI engineer building reliable systems with LLMs, evals, and production ML."
+    />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="#"><span id="person-initials">YN</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#work">Work</a>
+          <a href="#stack">Stack</a>
+          <a href="#writing">Writing</a>
+          <a href="#contact" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap">
+        <p class="eyebrow" id="person-role">AI engineer</p>
+        <h1>
+          <span id="hero-headline"
+            >I ship <span class="accent">LLM-powered products</span> with evals, guardrails, and
+            measurable quality.</span
+          >
+        </h1>
+        <p class="lede" id="hero-lede">
+          I build applied AI systems end-to-end—from data and retrieval to evaluation, tracing, and
+          production reliability.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#work">View selected work</a>
+          <a class="btn ghost" id="hero-email-link" href="mailto:you@email.com">Email me</a>
+        </div>
+      </section>
+
+      <section id="work" class="section wrap">
+        <h2 class="section-title">Selected work</h2>
+        <p class="section-intro">
+          Lead with 3–5 projects. For each: problem → your approach → stack → proof (metrics,
+          screenshots, or a short demo clip).
+        </p>
+        <ul class="card-grid" role="list">
+          <li>
+            <article class="card">
+              <h3>Shiiman Leads — AI lead generator</h3>
+              <p>
+                Traditional lead generators are rigid: long forms, low completion rates, and limited
+                context. I built <strong>Shiiman Leads</strong> to turn lead capture into a
+                conversation—an AI chatbot that qualifies visitors in real time and collects the
+                necessary details with a far better UX.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>LangChain</li>
+                <li>Python</li>
+                <li>TypeScript</li>
+                <li>RAG</li>
+                <li>Proxy integration</li>
+                <li>Railway</li>
+                <li>DB storage</li>
+              </ul>
+              <button
+                class="card-demo-btn"
+                type="button"
+                data-demo-url="https://shiimanleads.com/"
+                data-demo-title="Shiiman Leads demo"
+              >
+                Try demo
+              </button>
+              <a class="card-link" href="https://shiimanleads.com/" target="_blank" rel="noreferrer"
+                >Open Shiiman Leads →</a
+              >
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <h3>Agent workflow for ops</h3>
+              <p>
+                Tool-calling agents with human-in-the-loop approvals. Emphasize reliability: retries,
+                structured outputs, and tracing.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>TypeScript</li>
+                <li>Temporal</li>
+                <li>OTel</li>
+              </ul>
+              <a class="card-link" href="#">Live demo →</a>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <h3>Model evaluation &amp; regression tests</h3>
+              <p>
+                Golden datasets, LLM-as-judge where appropriate, and CI gates before prompt or model
+                changes ship.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>pytest</li>
+                <li>Weights &amp; Biases</li>
+                <li>GitHub Actions</li>
+              </ul>
+              <a class="card-link" href="#">Write-up →</a>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section id="stack" class="section section-alt">
+        <div class="wrap">
+          <h2 class="section-title">How I work</h2>
+          <div class="split">
+            <div>
+              <h3 class="subsection-title">Engineering</h3>
+              <ul class="plain-list">
+                <li>Production Python / TypeScript</li>
+                <li>APIs, async jobs, observability</li>
+                <li>Vector search &amp; data pipelines</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="subsection-title">AI / ML</h3>
+              <ul class="plain-list">
+                <li>Prompting, RAG, agents, fine-tuning when it earns its cost</li>
+                <li>Evals: offline sets, online metrics, human review loops</li>
+                <li>Safety: PII, prompt injection basics, red-teaming mindset</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="writing" class="section wrap">
+        <h2 class="section-title">Writing &amp; talks</h2>
+        <p class="section-intro">
+          Even one strong post beats ten empty links. Link to blog posts, notebooks, or conference
+          slides.
+        </p>
+        <ul class="link-list">
+          <li>
+            <a href="#">
+              <span class="link-title">Post title goes here</span>
+              <span class="link-meta">Blog · 2026</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="link-title">Notebook: comparing rerankers on your data</span>
+              <span class="link-meta">GitHub</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section section-cta">
+        <div class="wrap cta-inner">
+          <h2 class="section-title">Let’s build something careful and fast.</h2>
+          <p class="cta-text">
+            Open to roles in applied AI / ML platform / product engineering. Swap this for your
+            preferred CTA.
+          </p>
+          <a class="btn primary" id="contact-email-link" href="mailto:you@email.com"
+            ><span id="email-text">you@email.com</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="y"></span> <span id="person-name">Your Name</span>. <span id="footer-note">TypeScript + Vite.</span></p>
+        <p class="footer-links">
+          <a id="footer-github" href="https://github.com/">GitHub</a>
+          <a id="footer-linkedin" href="https://www.linkedin.com/">LinkedIn</a>
+        </p>
+      </div>
+    </footer>
+
+    <dialog id="demo-modal" class="demo-modal" aria-label="Demo">
+      <div class="demo-modal-inner" role="document">
+        <div class="demo-modal-header">
+          <p class="demo-modal-title" id="demo-modal-title">Demo</p>
+          <div class="demo-modal-actions">
+            <button class="demo-modal-close" type="button" data-demo-close aria-label="Close demo">
+              ✕
+            </button>
+          </div>
+        </div>
+        <div class="demo-modal-tabs" role="tablist" aria-label="Demo tabs">
+          <button
+            class="demo-tab"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="demo-panel-try"
+            id="demo-tab-try"
+            data-demo-tab="try"
+          >
+            Try demo
+          </button>
+          <button
+            class="demo-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="demo-panel-watch"
+            id="demo-tab-watch"
+            data-demo-tab="watch"
+          >
+            Watch the demo
+          </button>
+        </div>
+
+        <div class="demo-modal-panels">
+          <section
+            id="demo-panel-try"
+            class="demo-panel"
+            role="tabpanel"
+            aria-labelledby="demo-tab-try"
+            data-demo-panel="try"
+          >
+            <div class="demo-modal-frame">
+              <iframe
+                id="demo-modal-iframe"
+                title="Demo"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
+              ></iframe>
+            </div>
+            <p class="demo-modal-note">
+              If the embed is blocked by browser or site settings, use “Open Shiiman Leads” instead.
+            </p>
+          </section>
+
+          <section
+            id="demo-panel-watch"
+            class="demo-panel"
+            role="tabpanel"
+            aria-labelledby="demo-tab-watch"
+            data-demo-panel="watch"
+            hidden
+          >
+            <div class="demo-modal-frame">
+              <div class="demo-watch-placeholder" id="demo-watch-placeholder">
+                Recorded walkthrough coming soon (with a step-by-step explanation).
+              </div>
+              <iframe
+                id="demo-modal-video"
+                class="demo-modal-video"
+                title="Recorded demo"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                sandbox="allow-scripts allow-same-origin allow-presentation"
+                hidden
+              ></iframe>
+            </div>
+            <p class="demo-modal-note">
+              Want this live now? Send me the YouTube/Vimeo/Loom link and I’ll embed it here.
+            </p>
+          </section>
+        </div>
+      </div>
+    </dialog>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
