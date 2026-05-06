@@ -1,11 +1,5 @@
 /* Resume: same visual system as index (hero, sections, cards). Small overrides only. */
 
-@media (max-width: 640px) {
-  body.page-resume .nav a:not(.nav-cta) {
-    display: inline;
-  }
-}
-
 .resume-hero h1 {
   max-width: none;
   font-size: clamp(2rem, 4.5vw, 2.85rem);
@@ -111,7 +105,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.25rem 1.75rem;
+  gap: 1rem 1.25rem;
   margin: 0 0 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
@@ -155,6 +149,14 @@
 
   .resume-edu-logo {
     max-width: 8rem;
+  }
+
+  .resume-client-logo {
+    max-width: min(100%, 7.5rem);
+  }
+
+  .resume-contact-stack {
+    max-width: none;
   }
 }
 
