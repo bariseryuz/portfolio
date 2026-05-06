@@ -99,7 +99,8 @@ export const content: PortfolioContent = {
   },
   resume: {
     href: "#",
-    label: "Download PDF",
+    /** When "#", the site uses Print → Save as PDF; set to e.g. "/Baris_Eryuz_CV.pdf" for a direct file link. */
+    label: "Save as PDF",
   },
   resumePage: {
     title: "Baris Eryuz — Resume",

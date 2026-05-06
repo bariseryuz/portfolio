@@ -157,6 +157,46 @@ main {
   padding: clamp(3rem, 8vw, 5.5rem) 0 3rem;
 }
 
+.hero-inner {
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 2.75rem);
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-photo {
+  margin: 0;
+  justify-self: center;
+  width: min(100%, 20rem);
+}
+
+.hero-photo-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+}
+
+@media (min-width: 900px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+    gap: 2.5rem 3rem;
+  }
+
+  .hero-photo {
+    width: 100%;
+    justify-self: end;
+  }
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -172,7 +212,13 @@ main {
   font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0 0 1.25rem;
-  max-width: 18ch;
+  max-width: 20ch;
+}
+
+@media (min-width: 900px) {
+  .hero h1 {
+    max-width: 18ch;
+  }
 }
 
 .accent {

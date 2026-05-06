@@ -24,7 +24,6 @@
         <nav class="nav" aria-label="Primary">
           <a href="#work">Work</a>
           <a href="#stack">Stack</a>
-          <a href="#writing">Writing</a>
           <a href="./resume.html">Resume/CV</a>
           <a href="#contact" class="nav-cta">Contact</a>
         </nav>
@@ -33,20 +32,36 @@
 
     <main id="main">
       <section class="hero wrap">
-        <p class="eyebrow" id="person-role">AI engineer</p>
-        <h1>
-          <span id="hero-headline"
-            >I ship <span class="accent">LLM-powered products</span> with evals, guardrails, and
-            measurable quality.</span
-          >
-        </h1>
-        <p class="lede" id="hero-lede">
-          I build applied AI systems end-to-end—from data and retrieval to evaluation, tracing, and
-          production reliability.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#work">View selected work</a>
-          <a class="btn ghost" id="hero-email-link" href="mailto:you@email.com">Email me</a>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow" id="person-role">AI engineer</p>
+            <h1>
+              <span id="hero-headline"
+                >I ship <span class="accent">LLM-powered products</span> with evals, guardrails, and
+                measurable quality.</span
+              >
+            </h1>
+            <p class="lede" id="hero-lede">
+              I build applied AI systems end-to-end—from data and retrieval to evaluation, tracing, and
+              production reliability.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#work">View selected work</a>
+              <a class="btn ghost" id="hero-email-link" href="mailto:you@email.com">Email me</a>
+            </div>
+          </div>
+          <div class="hero-photo">
+            <img
+              src="/people.jpeg"
+              alt=""
+              width="640"
+              height="800"
+              class="hero-photo-img"
+              id="hero-portrait"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </div>
         </div>
       </section>
 
@@ -163,48 +178,39 @@
 
       <section id="stack" class="section section-alt">
         <div class="wrap">
-          <h2 class="section-title">How I work</h2>
+          <h2 class="section-title">Technical stack</h2>
           <div class="split">
             <div>
-              <h3 class="subsection-title">Engineering</h3>
+              <h3 class="subsection-title">Languages &amp; core</h3>
               <ul class="plain-list">
-                <li>Production Python / TypeScript</li>
-                <li>APIs, async jobs, observability</li>
-                <li>Vector search &amp; data pipelines</li>
+                <li>Python (Expert)</li>
+                <li>SQL</li>
+                <li>Pydantic</li>
+                <li>FastAPI</li>
+                <li>Docker</li>
               </ul>
             </div>
             <div>
-              <h3 class="subsection-title">AI / ML</h3>
+              <h3 class="subsection-title">AI / LLM</h3>
               <ul class="plain-list">
-                <li>Prompting, RAG, agents, fine-tuning when it earns its cost</li>
-                <li>Evals: offline sets, online metrics, human review loops</li>
-                <li>Safety: PII, prompt injection basics, red-teaming mindset</li>
+                <li>LangChain</li>
+                <li>LlamaIndex</li>
+                <li>DSPy</li>
+                <li>RAG architecture</li>
+                <li>Evaluation (Ragas, LangSmith)</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="subsection-title">Data</h3>
+              <ul class="plain-list">
+                <li>Pinecone</li>
+                <li>Weaviate</li>
+                <li>PostgreSQL (pgvector)</li>
+                <li>ETL pipelines</li>
               </ul>
             </div>
           </div>
         </div>
-      </section>
-
-      <section id="writing" class="section wrap">
-        <h2 class="section-title">Writing &amp; talks</h2>
-        <p class="section-intro">
-          Even one strong post beats ten empty links. Link to blog posts, notebooks, or conference
-          slides.
-        </p>
-        <ul class="link-list">
-          <li>
-            <a href="#">
-              <span class="link-title">Post title goes here</span>
-              <span class="link-meta">Blog · 2026</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="link-title">Notebook: comparing rerankers on your data</span>
-              <span class="link-meta">GitHub</span>
-            </a>
-          </li>
-        </ul>
       </section>
 
       <section id="contact" class="section section-cta">

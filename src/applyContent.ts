@@ -46,6 +46,17 @@ export function applyContent(page: ApplyContentPage): void {
     setLink("hero-email-link", `mailto:${content.email}`);
     setLink("contact-email-link", `mailto:${content.email}`);
     setText("email-text", content.email);
+    const portrait = document.getElementById("hero-portrait");
+    if (portrait instanceof HTMLImageElement) {
+      portrait.alt = `Portrait of ${content.name}`;
+    }
+  }
+
+  if (page === "resume") {
+    const cvPortrait = document.getElementById("cv-portrait");
+    if (cvPortrait instanceof HTMLImageElement) {
+      cvPortrait.alt = `Portrait of ${content.name}`;
+    }
   }
 
   setLink("footer-github", content.links.github);

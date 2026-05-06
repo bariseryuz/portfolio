@@ -12,6 +12,12 @@
   letter-spacing: -0.02em;
 }
 
+@media (min-width: 900px) {
+  .resume-hero h1 {
+    max-width: 18ch;
+  }
+}
+
 .resume-contact-stack {
   max-width: 32ch;
 }
@@ -34,11 +40,6 @@
 .resume-contact a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
-}
-
-.resume-pdf-hint {
-  margin: 1.5rem 0 0;
-  max-width: 52ch;
 }
 
 .resume-skills-root {
@@ -174,8 +175,7 @@
   body.page-resume .skip-link,
   body.page-resume .site-header,
   body.page-resume .site-footer,
-  body.page-resume .hero-actions,
-  body.page-resume .resume-pdf-hint {
+  body.page-resume .hero-actions {
     display: none !important;
   }
 
@@ -212,6 +212,23 @@
   body.page-resume .tags li {
     background: #eee;
     color: #111;
+  }
+
+  .resume-hero .hero-inner {
+    break-inside: avoid;
+  }
+
+  .resume-hero .hero-photo-img {
+    max-height: 200px;
+    width: auto;
+    margin: 0 auto;
+    box-shadow: none;
+    border-color: #ccc;
+  }
+
+  .resume-hero .hero-photo {
+    width: auto;
+    max-width: 160px;
   }
 
   a {

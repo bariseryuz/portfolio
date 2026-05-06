@@ -24,7 +24,6 @@
         <nav class="nav" aria-label="Primary">
           <a href="./index.html#work">Work</a>
           <a href="./index.html#stack">Stack</a>
-          <a href="./index.html#writing">Writing</a>
           <a href="./resume.html" aria-current="page">Resume/CV</a>
           <a href="./index.html#contact" class="nav-cta">Contact</a>
         </nav>
@@ -33,16 +32,29 @@
 
     <main id="main">
       <section class="hero wrap resume-hero">
-        <p class="eyebrow">Resume / CV</p>
-        <h1 id="cv-name"></h1>
-        <div class="resume-contact-stack lede resume-contact" id="cv-meta-line" role="group" aria-label="Contact"></div>
-        <div class="hero-actions">
-          <a class="btn ghost" href="./index.html">← Portfolio home</a>
-          <a class="btn primary" id="resume-link" href="#" target="_blank" rel="noreferrer">Download PDF</a>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Resume / CV</p>
+            <h1 id="cv-name"></h1>
+            <div class="resume-contact-stack lede resume-contact" id="cv-meta-line" role="group" aria-label="Contact"></div>
+            <div class="hero-actions">
+              <a class="btn ghost" href="./index.html">← Portfolio home</a>
+              <a class="btn primary" id="resume-link" href="#" target="_blank" rel="noreferrer">Save as PDF</a>
+            </div>
+          </div>
+          <div class="hero-photo">
+            <img
+              src="/people.jpeg"
+              alt=""
+              width="640"
+              height="800"
+              class="hero-photo-img"
+              id="cv-portrait"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </div>
         </div>
-        <p class="section-intro resume-pdf-hint">
-          Save as <strong id="cv-pdf-filename">FirstName_LastName_CV.pdf</strong> · Use Print → Save as PDF.
-        </p>
       </section>
 
       <section class="section wrap">

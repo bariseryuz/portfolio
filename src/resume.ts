@@ -23,9 +23,6 @@ function renderCv(): void {
   const nameEl = document.getElementById("cv-name");
   if (nameEl) nameEl.textContent = name;
 
-  const pdfNameEl = document.getElementById("cv-pdf-filename");
-  if (pdfNameEl) pdfNameEl.textContent = `${name.replace(/\s+/g, "_")}_CV.pdf`;
-
   const summaryEl = document.getElementById("cv-summary");
   if (summaryEl) summaryEl.textContent = cv.summary;
 
@@ -124,6 +121,21 @@ function renderCv(): void {
   }
 }
 
+function wireResumeActions(): void {
+  const link = document.getElementById("resume-link");
+  if (link instanceof HTMLAnchorElement) {
+    const raw = link.getAttribute("href") ?? "#";
+    const isPrint = raw === "" || raw === "#";
+    if (isPrint) {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.print();
+      });
+    }
+  }
+}
+
 bootstrapSharedChrome("resume");
 renderCv();
+wireResumeActions();
 initCursorGlow();
