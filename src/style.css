@@ -135,6 +135,11 @@ a {
   color: var(--text);
 }
 
+.nav a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .nav-cta {
   padding: 0.45rem 0.9rem;
   border-radius: 999px;

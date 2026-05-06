@@ -1,0 +1,221 @@
+/* Resume: same visual system as index (hero, sections, cards). Small overrides only. */
+
+@media (max-width: 640px) {
+  body.page-resume .nav a:not(.nav-cta) {
+    display: inline;
+  }
+}
+
+.resume-hero h1 {
+  max-width: none;
+  font-size: clamp(2rem, 4.5vw, 2.85rem);
+  letter-spacing: -0.02em;
+}
+
+.resume-contact-stack {
+  max-width: 32ch;
+}
+
+.resume-contact-line {
+  margin: 0 0 0.4rem;
+  line-height: 1.5;
+}
+
+.resume-contact-line:last-child {
+  margin-bottom: 0;
+}
+
+.resume-contact a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.resume-contact a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.resume-pdf-hint {
+  margin: 1.5rem 0 0;
+  max-width: 52ch;
+}
+
+.resume-skills-root {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.resume-skill-group-title {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+}
+
+.resume-skill-group-tags {
+  margin-top: 0;
+}
+
+.resume-exp-meta {
+  margin: -0.35rem 0 0.65rem;
+}
+
+.resume-card-meta-period {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.resume-card-meta-period span {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.resume-card-meta-line2 {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.resume-card-meta-note {
+  margin: 0.4rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--muted);
+  max-width: 58ch;
+}
+
+.resume-card-grid .card h3 {
+  font-size: 1.05rem;
+}
+
+/* Three experience cards in one row on wide viewports (aligned). */
+.resume-card-grid {
+  align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+  .resume-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.resume-exp-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 1.75rem;
+  margin: 0 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.resume-client-logo {
+  height: 2.25rem;
+  width: auto;
+  max-width: 7.5rem;
+  object-fit: contain;
+  object-position: left center;
+  filter: brightness(1.08) contrast(1.02);
+}
+
+.resume-edu-block-inner {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.resume-edu-logo {
+  flex-shrink: 0;
+  height: 3.25rem;
+  width: auto;
+  max-width: 10rem;
+  object-fit: contain;
+  object-position: left top;
+  margin-top: 0.15rem;
+  filter: brightness(1.06) contrast(1.02);
+}
+
+.resume-edu-text {
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .resume-edu-block-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .resume-edu-logo {
+    max-width: 8rem;
+  }
+}
+
+.resume-edu-degree {
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.resume-edu-split .resume-edu-detail {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+@media print {
+  body.page-resume .skip-link,
+  body.page-resume .site-header,
+  body.page-resume .site-footer,
+  body.page-resume .hero-actions,
+  body.page-resume .resume-pdf-hint {
+    display: none !important;
+  }
+
+  body.page-resume {
+    background: #fff !important;
+    background-image: none !important;
+    color: #000;
+  }
+
+  body.page-resume #cursor-glow {
+    display: none !important;
+  }
+
+  body.page-resume .resume-hero h1,
+  body.page-resume .section-title,
+  body.page-resume .subsection-title {
+    color: #000;
+  }
+
+  body.page-resume .section-intro,
+  body.page-resume .lede,
+  body.page-resume .plain-list,
+  body.page-resume .card p,
+  body.page-resume .resume-edu-detail {
+    color: #222;
+  }
+
+  body.page-resume .card {
+    background: #fff;
+    border-color: #ccc;
+    break-inside: avoid;
+  }
+
+  body.page-resume .tags li {
+    background: #eee;
+    color: #111;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}

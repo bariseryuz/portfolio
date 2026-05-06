@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Resume — AI engineer building reliable systems with LLMs, evals, and production ML."
+    />
+    <title>Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page-resume">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="./index.html"><span id="person-initials">YN</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="./index.html#work">Work</a>
+          <a href="./index.html#stack">Stack</a>
+          <a href="./index.html#writing">Writing</a>
+          <a href="./resume.html" aria-current="page">Resume/CV</a>
+          <a href="./index.html#contact" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap resume-hero">
+        <p class="eyebrow">Resume / CV</p>
+        <h1 id="cv-name"></h1>
+        <div class="resume-contact-stack lede resume-contact" id="cv-meta-line" role="group" aria-label="Contact"></div>
+        <div class="hero-actions">
+          <a class="btn ghost" href="./index.html">← Portfolio home</a>
+          <a class="btn primary" id="resume-link" href="#" target="_blank" rel="noreferrer">Download PDF</a>
+        </div>
+        <p class="section-intro resume-pdf-hint">
+          Save as <strong id="cv-pdf-filename">FirstName_LastName_CV.pdf</strong> · Use Print → Save as PDF.
+        </p>
+      </section>
+
+      <section class="section wrap">
+        <h2 class="section-title">Summary</h2>
+        <p class="section-intro" id="cv-summary"></p>
+      </section>
+
+      <section class="section wrap">
+        <h2 class="section-title">Experience</h2>
+        <ul class="card-grid resume-card-grid" id="cv-experience-entries" role="list"></ul>
+      </section>
+
+      <section class="section section-alt">
+        <div class="wrap">
+          <h2 class="section-title">Education</h2>
+          <div class="split resume-edu-split" id="cv-education-entries"></div>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        <h2 class="section-title">Technical skills</h2>
+        <div id="cv-skills-root" class="resume-skills-root" aria-label="Technical skills by area"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="y"></span> <span id="person-name">Your Name</span>. <span id="footer-note">TypeScript + Vite.</span></p>
+        <p class="footer-links">
+          <a id="footer-github" href="https://github.com/">GitHub</a>
+          <a id="footer-linkedin" href="https://www.linkedin.com/">LinkedIn</a>
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/resume.ts"></script>
+  </body>
+</html>
