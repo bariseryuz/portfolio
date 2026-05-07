@@ -94,10 +94,11 @@
               <button
                 class="card-demo-btn"
                 type="button"
+                data-demo-video="/shiiman-lead-demo.mp4"
                 data-demo-url="https://shiimanleads.com/"
-                data-demo-title="Shiiman Leads demo"
+                data-demo-title="Shiiman Leads"
               >
-                Try demo
+                Watch video
               </button>
               <a class="card-link" href="https://shiimanleads.com/" target="_blank" rel="noreferrer"
                 >Open Shiiman Leads →</a
@@ -247,7 +248,7 @@
             </button>
           </div>
         </div>
-        <div class="demo-modal-tabs" role="tablist" aria-label="Demo tabs">
+        <div class="demo-modal-tabs" id="demo-modal-tabs" role="tablist" aria-label="Demo tabs">
           <button
             class="demo-tab"
             type="button"
@@ -286,10 +287,18 @@
                 title="Demo"
                 loading="lazy"
                 referrerpolicy="no-referrer"
-                sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
+                sandbox="allow-scripts allow-forms allow-popups"
               ></iframe>
+              <video
+                id="demo-modal-native-video"
+                class="demo-modal-native-video"
+                controls
+                playsinline
+                preload="auto"
+                hidden
+              ></video>
             </div>
-            <p class="demo-modal-note">
+            <p class="demo-modal-note" id="demo-modal-note-try">
               If the embed is blocked by browser or site settings, use “Open Shiiman Leads” instead.
             </p>
           </section>
@@ -312,11 +321,11 @@
                 title="Recorded demo"
                 loading="lazy"
                 referrerpolicy="no-referrer"
-                sandbox="allow-scripts allow-same-origin allow-presentation"
+                sandbox="allow-scripts allow-presentation"
                 hidden
               ></iframe>
             </div>
-            <p class="demo-modal-note">
+            <p class="demo-modal-note" id="demo-modal-note-watch">
               Want this live now? Send me the YouTube/Vimeo/Loom link and I’ll embed it here.
             </p>
           </section>

@@ -392,11 +392,13 @@ main {
 
 .demo-modal.demo-modal {
   width: min(980px, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 0;
   background: color-mix(in oklab, var(--bg) 55%, var(--bg-elevated));
   color: var(--text);
+  overflow: hidden;
 }
 
 .demo-modal::backdrop {
@@ -406,7 +408,9 @@ main {
 
 .demo-modal-inner {
   display: grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto;
+  max-height: inherit;
+  min-height: 0;
 }
 
 .demo-modal-header {
@@ -457,6 +461,9 @@ main {
 
 .demo-modal-panels {
   padding-top: 0.25rem;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .demo-modal-close {
@@ -473,30 +480,43 @@ main {
   border-color: color-mix(in oklab, var(--accent) 40%, var(--border));
 }
 
+/* Single fixed-height cell so iframe / video / placeholder occupy the same slot (no stacking gap). */
 .demo-modal-frame {
+  --demo-frame-h: min(72vh, 640px);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: var(--demo-frame-h);
   padding: 0.9rem;
+  min-height: 0;
 }
 
-.demo-modal-frame iframe {
+.demo-modal-frame > iframe,
+.demo-modal-frame > .demo-modal-native-video,
+.demo-modal-frame > .demo-watch-placeholder {
+  grid-column: 1;
+  grid-row: 1;
   display: block;
   width: 100%;
-  height: min(72vh, 640px);
+  height: 100%;
+  min-height: 0;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--bg);
+  box-sizing: border-box;
 }
 
-.demo-watch-placeholder {
+.demo-modal-frame > .demo-watch-placeholder {
   display: grid;
   place-items: center;
-  width: 100%;
-  height: min(72vh, 640px);
-  border: 1px dashed color-mix(in oklab, var(--border) 65%, var(--muted));
-  border-radius: 12px;
+  border-style: dashed;
   color: var(--muted);
   text-align: center;
   padding: 1.25rem;
   background: color-mix(in oklab, var(--bg) 65%, var(--bg-elevated));
+}
+
+.demo-modal-native-video {
+  object-fit: contain;
 }
 
 .demo-modal-note {
@@ -619,9 +639,8 @@ main {
 }
 
 @media (max-width: 640px) {
-  .demo-modal-frame iframe,
-  .demo-watch-placeholder {
-    height: min(58vh, 520px);
+  .demo-modal-frame {
+    --demo-frame-h: min(58vh, 520px);
   }
 
   .demo-modal-header {
