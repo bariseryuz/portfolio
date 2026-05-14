@@ -184,6 +184,9 @@ main {
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center 20%;
+  transform: scale(1.12);
+  transform-origin: center 30%;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--bg-elevated);
